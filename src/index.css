@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import "tailwindcss";
+
+.montesserat{
+    font-family: 'Montserrat', sans-serif;
+}
+
+.roboto{
+    font-family: "Roboto", sans-serif;
+}
+
+.city_image{
+    transition: transform .5s ease-in-out;
+    
+}
+
+.city_image:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}

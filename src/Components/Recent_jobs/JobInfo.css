@@ -1,0 +1,10 @@
+.jobBanner{
+    background-image: url('../../../public/ChatGPT\ Image\ Jul\ 12\,\ 2026\,\ 02_20_26\ PM.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 400px;
+    object-fit: cover;
+    width: 100%;
+}
+

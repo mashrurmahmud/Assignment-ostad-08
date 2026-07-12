@@ -1,0 +1,30 @@
+.my_menu{
+    position: relative;
+    cursor: pointer;
+
+
+
+}
+
+
+.my_menu:hover{
+    background-color: chartreuse;
+    border-radius: 10px;
+    
+}
+
+.my_menu:hover::after{
+    color: white;
+}
+
+.my_menu::after{
+    content:"\f107";
+    position: absolute;
+    top: 12px;
+    right: 5%;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    z-index: 11;
+
+
+}

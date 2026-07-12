@@ -1,0 +1,316 @@
+[
+  {
+    "title": "Frontend Developer",
+    "company": "TechNova Ltd.",
+    "location": "Dhaka, Bangladesh",
+    "type": "Full-time",
+    "salary": "$900 - $1200",
+    "experience": "1-2 Years",
+    "category": "Development",
+    "description": "We are looking for a Frontend Developer to build modern, responsive web applications using React.js and Tailwind CSS.",
+    "requirements": [
+      "Bachelor's degree in Computer Science or related field",
+      "1+ year of React.js experience",
+      "Strong knowledge of HTML, CSS, and JavaScript",
+      "Experience with REST APIs",
+      "Good communication skills"
+    ],
+    "responsibilities": [
+      "Develop responsive user interfaces",
+      "Collaborate with UI/UX designers",
+      "Optimize application performance",
+      "Fix bugs and maintain existing applications"
+    ],
+    "benefits": [
+      "Health insurance",
+      "Annual bonus",
+      "Remote work flexibility",
+      "Paid leave"
+    ],
+    "skills": ["React", "JavaScript", "Tailwind CSS", "Git"],
+    "vacancies": 2,
+    "education": "Bachelor's Degree",
+    "applicationDeadline": "2026-08-15",
+    "posted": "2026-07-12",
+    "logo": "https://i.ibb.co.com/jPr8HFny/Chat-GPT-Image-Jul-12-2026-01-23-13-PM.png"
+  },
+  {
+    "title": "Backend Developer",
+    "company": "CodeSphere",
+    "location": "Chattogram, Bangladesh",
+    "type": "Full-time",
+    "salary": "$1000 - $1500",
+    "experience": "2-3 Years",
+    "category": "Development",
+    "description": "Build secure and scalable REST APIs using Node.js and Express.",
+    "requirements": [
+      "Experience with Node.js and Express",
+      "Strong MongoDB knowledge",
+      "Knowledge of JWT Authentication",
+      "Understanding of REST APIs"
+    ],
+    "responsibilities": [
+      "Develop backend APIs",
+      "Optimize database queries",
+      "Maintain server security",
+      "Write documentation"
+    ],
+    "benefits": [
+      "Performance bonus",
+      "Health insurance",
+      "Flexible working hours"
+    ],
+    "skills": ["Node.js", "Express", "MongoDB", "JWT"],
+    "vacancies": 3,
+    "education": "Bachelor's Degree",
+    "applicationDeadline": "2026-08-20",
+    "posted": "2026-07-11",
+    "logo": "https://i.ibb.co.com/WvKBXxyr/Chat-GPT-Image-Jul-12-2026-01-27-28-PM.png"
+  },
+  {
+    "title": "MERN Stack Developer",
+    "company": "DevNest",
+    "location": "Remote",
+    "type": "Remote",
+    "salary": "$1500 - $2200",
+    "experience": "2+ Years",
+    "category": "Development",
+    "description": "Develop full-stack web applications using the MERN stack.",
+    "requirements": [
+      "Strong React knowledge",
+      "Node.js and Express experience",
+      "MongoDB experience",
+      "Git and GitHub knowledge"
+    ],
+    "responsibilities": [
+      "Develop frontend and backend",
+      "Implement authentication",
+      "Deploy applications",
+      "Fix production issues"
+    ],
+    "benefits": [
+      "Remote work",
+      "Paid vacation",
+      "Learning budget"
+    ],
+    "skills": ["MongoDB", "Express", "React", "Node.js"],
+    "vacancies": 2,
+    "education": "Bachelor's Degree",
+    "applicationDeadline": "2026-08-30",
+    "posted": "2026-07-10",
+    "logo": "https://i.ibb.co.com/6cRXftC4/images-1.png"
+  },
+  {
+    "title": "UI/UX Designer",
+    "company": "PixelCraft",
+    "location": "Dhaka, Bangladesh",
+    "type": "Full-time",
+    "salary": "$800 - $1100",
+    "experience": "1-3 Years",
+    "category": "Design",
+    "description": "Design intuitive user interfaces for web and mobile applications.",
+    "requirements": [
+      "Experience with Figma",
+      "Portfolio of UI designs",
+      "Knowledge of design systems"
+    ],
+    "responsibilities": [
+      "Create wireframes",
+      "Design prototypes",
+      "Work with developers"
+    ],
+    "benefits": [
+      "Health insurance",
+      "Yearly bonus"
+    ],
+    "skills": ["Figma", "Adobe XD", "UI Design"],
+    "vacancies": 1,
+    "education": "Bachelor's Degree",
+    "applicationDeadline": "2026-08-18",
+    "posted": "2026-07-09",
+    "logo": "https://i.ibb.co.com/9mtggxFT/Chat-GPT-Image-Jul-12-2026-12-17-22-AM.png"
+  },
+  {
+    "title": "DevOps Engineer",
+    "company": "CloudStack",
+    "location": "Remote",
+    "type": "Remote",
+    "salary": "$2200 - $3000",
+    "experience": "3+ Years",
+    "category": "DevOps",
+    "description": "Manage cloud infrastructure and automate deployments.",
+    "requirements": [
+      "AWS experience",
+      "Docker knowledge",
+      "Kubernetes experience",
+      "CI/CD understanding"
+    ],
+    "responsibilities": [
+      "Deploy applications",
+      "Monitor infrastructure",
+      "Maintain cloud security"
+    ],
+    "benefits": [
+      "Remote work",
+      "Stock options",
+      "Medical insurance"
+    ],
+    "skills": ["AWS", "Docker", "Kubernetes", "Jenkins"],
+    "vacancies": 2,
+    "education": "Bachelor's Degree",
+    "applicationDeadline": "2026-08-25",
+    "posted": "2026-07-08",
+    "logo": "https://i.pravatar.cc/150?img=5"
+  },
+  {
+    "title": "QA Engineer",
+    "company": "Bug Hunters",
+    "location": "Rajshahi, Bangladesh",
+    "type": "Full-time",
+    "salary": "$900 - $1300",
+    "experience": "1-2 Years",
+    "category": "Testing",
+    "description": "Ensure software quality through manual and automated testing.",
+    "requirements": [
+      "Experience with Selenium",
+      "Understanding of SDLC",
+      "Knowledge of API testing"
+    ],
+    "responsibilities": [
+      "Write test cases",
+      "Report bugs",
+      "Automate regression testing"
+    ],
+    "benefits": [
+      "Festival bonus",
+      "Paid leave"
+    ],
+    "skills": ["Selenium", "Postman", "Jest"],
+    "vacancies": 2,
+    "education": "Bachelor's Degree",
+    "applicationDeadline": "2026-08-17",
+    "posted": "2026-07-07",
+    "logo": "https://i.ibb.co.com/jFG1TX8/Chat-On-image.jpg"
+  },
+  {
+    "title": "Data Analyst",
+    "company": "Insight Analytics",
+    "location": "Dhaka, Bangladesh",
+    "type": "Full-time",
+    "salary": "$1200 - $1700",
+    "experience": "2 Years",
+    "category": "Data",
+    "description": "Analyze business data and generate actionable insights.",
+    "requirements": [
+      "Strong SQL skills",
+      "Python experience",
+      "Power BI knowledge"
+    ],
+    "responsibilities": [
+      "Prepare reports",
+      "Analyze business trends",
+      "Build dashboards"
+    ],
+    "benefits": [
+      "Hybrid work",
+      "Health insurance"
+    ],
+    "skills": ["SQL", "Python", "Power BI"],
+    "vacancies": 1,
+    "education": "Bachelor's Degree",
+    "applicationDeadline": "2026-08-12",
+    "posted": "2026-07-06",
+    "logo": "https://i.pravatar.cc/150?img=7"
+  },
+  {
+    "title": "Digital Marketing Executive",
+    "company": "BrandBoost",
+    "location": "Dhaka, Bangladesh",
+    "type": "Full-time",
+    "salary": "$700 - $1000",
+    "experience": "1 Year",
+    "category": "Marketing",
+    "description": "Execute digital marketing campaigns across multiple channels.",
+    "requirements": [
+      "SEO knowledge",
+      "Google Ads experience",
+      "Social media marketing"
+    ],
+    "responsibilities": [
+      "Manage campaigns",
+      "Track analytics",
+      "Improve conversions"
+    ],
+    "benefits": [
+      "Performance bonus",
+      "Free training"
+    ],
+    "skills": ["SEO", "Google Ads", "Facebook Ads"],
+    "vacancies": 2,
+    "education": "Bachelor's Degree",
+    "applicationDeadline": "2026-08-10",
+    "posted": "2026-07-05",
+    "logo": "https://i.ibb.co.com/SpdfGyR/Chat-On-image-1.jpg"
+  },
+  {
+    "title": "Cyber Security Analyst",
+    "company": "SecureTech",
+    "location": "Dhaka, Bangladesh",
+    "type": "Full-time",
+    "salary": "$1800 - $2500",
+    "experience": "3 Years",
+    "category": "Security",
+    "description": "Protect company systems from cyber threats and vulnerabilities.",
+    "requirements": [
+      "Network security knowledge",
+      "Ethical hacking experience",
+      "Security certifications preferred"
+    ],
+    "responsibilities": [
+      "Monitor security events",
+      "Conduct vulnerability assessments",
+      "Respond to incidents"
+    ],
+    "benefits": [
+      "Medical insurance",
+      "Certification reimbursement"
+    ],
+    "skills": ["Network Security", "SIEM", "Linux"],
+    "vacancies": 1,
+    "education": "Bachelor's Degree",
+    "applicationDeadline": "2026-08-28",
+    "posted": "2026-07-04",
+    "logo": "https://i.ibb.co.com/tw92vCRr/Chat-On-image-2.jpg"
+  },
+  {
+    "title": "Mobile App Developer",
+    "company": "AppWorks",
+    "location": "Sylhet, Bangladesh",
+    "type": "Full-time",
+    "salary": "$1300 - $1900",
+    "experience": "2 Years",
+    "category": "Development",
+    "description": "Develop cross-platform mobile applications using Flutter.",
+    "requirements": [
+      "Flutter experience",
+      "Firebase knowledge",
+      "REST API integration"
+    ],
+    "responsibilities": [
+      "Develop mobile apps",
+      "Fix application bugs",
+      "Publish apps to stores"
+    ],
+    "benefits": [
+      "Health insurance",
+      "Paid holidays",
+      "Annual bonus"
+    ],
+    "skills": ["Flutter", "Dart", "Firebase"],
+    "vacancies": 2,
+    "education": "Bachelor's Degree",
+    "applicationDeadline": "2026-08-22",
+    "posted": "2026-07-03",
+    "logo": "https://i.pravatar.cc/150?img=10"
+  }
+]
