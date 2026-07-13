@@ -8,6 +8,7 @@ import Home from './Components/Home'
 import Jobinfo from './Components/Recent_jobs/Jobinfo'
 import AuthLayOut from './AuthLayOut/AuthLayOut'
 import Login from './Components/Login/Login'
+import Register from './Register/Register'
 
 
 
@@ -23,12 +24,16 @@ function App() {
         <Route path='/' element={<Home/>}/>
         <Route path='/jobinfo/:id' element={<Jobinfo/>}/>
         
+        
          
           
        </Route>
        <Route path='/auth' element={<AuthLayOut/>}>
          <Route path='/auth/login' element={<Login/>}/>
+         <Route path='/auth/register' element={<Register/>}/>
          
+
+
        </Route> 
 
        </Routes>

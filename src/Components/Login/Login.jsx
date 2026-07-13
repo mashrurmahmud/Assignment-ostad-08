@@ -1,6 +1,42 @@
 import React from 'react';
+import { useForm } from 'react-hook-form';
+import { Link } from 'react-router-dom';
+import axiosInstance from '../../api/axiosInstance';
+import Swal from 'sweetalert2';
 
 const Login = () => {
+    const {register, handleSubmit, formState: { errors } } = useForm();
+
+
+    //     try {
+    //     const response = await axiosInstance.post("/login", data);
+
+    //     console.log(response?.message);
+    //     console.log(response?.user);
+    // } catch (error) {
+    //     console.log(error.response?.data?.message,"the data");
+    // }
+
+    const onSubmit = async(data) => {
+        
+        try{
+            const res = await axiosInstance.post('/login', data);
+            console.log(res?.data?.message);
+
+        }catch(error){
+            Swal.fire({
+            icon: "error",
+            html: `<h1 className='text-red-600'>${error?.response?.data?.message}</h1>`,
+            title: "Oops...",
+            text: `${error?.response?.data?.message}`,
+            footer: "<a href=\"#\">Why do I have this issue?</a>"
+});
+
+        }
+
+      
+    
+    };
     return (
        <div className="min-h-screen my-2 bg-gray-100 flex items-center justify-center px-4">
       <div className="w-full max-w-5xl overflow-hidden rounded-2xl bg-white shadow-2xl grid md:grid-cols-2">
@@ -32,7 +68,7 @@ const Login = () => {
               </p>
             </div>
 
-            <form className="space-y-5">
+            <form onSubmit={handleSubmit(onSubmit)} className="space-y-5">
               {/* Email */}
               <div>
                 <label className="mb-2 block text-sm font-medium text-gray-700">
@@ -41,9 +77,12 @@ const Login = () => {
 
                 <input
                   type="email"
+                  {...register('email',{required:"Email is required"})}
                   placeholder="Enter your email"
                   className="w-full rounded-lg border border-gray-300 px-4 py-3 outline-none transition focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200"
                 />
+                {errors.email && <span className='text-red-600'>{errors.email.message}</span>}
+               
               </div>
 
               {/* Password */}
@@ -63,9 +102,11 @@ const Login = () => {
 
                 <input
                   type="password"
+                  {...register('password',{required:"Password is required"})}
                   placeholder="Enter your password"
                   className="w-full rounded-lg border border-gray-300 px-4 py-3 outline-none transition focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200"
                 />
+                {errors.password && <span className='text-red-600'>{errors.password.message}</span>}
               </div>
 
               {/* Remember Me */}
@@ -73,6 +114,7 @@ const Login = () => {
                 <label className="flex items-center gap-2 text-sm text-gray-600">
                   <input
                     type="checkbox"
+                    name="remember"
                     className="h-4 w-4 accent-indigo-600"
                   />
                   Remember me
@@ -108,12 +150,12 @@ const Login = () => {
             {/* Register */}
             <p className="mt-8 text-center text-gray-600">
               Don't have an account?{" "}
-              <a
-                href="/register"
+              <Link
+                to="/auth/register"
                 className="font-semibold text-indigo-600 hover:underline"
               >
                 Sign Up
-              </a>
+              </Link>
             </p>
           </div>
         </div>
