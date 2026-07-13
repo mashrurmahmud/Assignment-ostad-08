@@ -1,11 +1,12 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import axiosInstance from '../../api/axiosInstance';
 import Swal from 'sweetalert2';
 
 const Login = () => {
     const {register, handleSubmit, formState: { errors } } = useForm();
+    const navigate = useNavigate();
     
 
 
@@ -22,7 +23,14 @@ const Login = () => {
         
         try{
             const res = await axiosInstance.post('/login', data);
-            console.log(res?.data?.message);
+               Swal.fire({
+                    position: "center",
+                    icon: "success",
+                    title: "Logged in successfully",
+                    showConfirmButton: false,
+                    timer: 1500
+            });
+            navigate('/');
 
         }catch(error){
             Swal.fire({

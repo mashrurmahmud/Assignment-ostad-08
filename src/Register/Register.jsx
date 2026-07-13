@@ -1,5 +1,5 @@
 import { useForm } from "react-hook-form";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import axiosInstance from "../api/axiosInstance";
 import { zodResolver } from '@hookform/resolvers/zod';
 import * as z from "zod";
@@ -24,6 +24,7 @@ const Register = () => {
             resolver:zodResolver(user),
         }
     );
+    const navigate = useNavigate()
 
  
 
@@ -39,6 +40,8 @@ const Register = () => {
         showConfirmButton: false,
         timer: 1500
 });
+
+         
 
         
 
