@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import axiosInstance from "../api/axiosInstance";
 import { zodResolver } from '@hookform/resolvers/zod';
 import * as z from "zod";
+import Swal from "sweetalert2";
 
 // @hookform/resolvers/zod
 
@@ -11,6 +12,7 @@ import * as z from "zod";
         name: z.string().min(3, { message: "Name must be at least 3 characters long" }),
         email: z.string().email({ message: "Enter a valid email address" }),
         password: z.string().min(6, { message: "Password must be at least 6 characters long" }),
+        username: z.string().min(3, { message: "Username must be at least 3 characters long" }),
         confirmPassword: z.string().min(6, { message: "Password must be at least 6 characters long" }),
     }).refine((data) => data.password === data.confirmPassword, {
         message: "Passwords do not match",
@@ -30,12 +32,24 @@ const Register = () => {
         const { confirmPassword, ...rest } = data;
 
         const res = await axiosInstance.post("/register", rest);
+        Swal.fire({
+        position: "center",
+        icon: "success",
+        title: "Your work has been saved",
+        showConfirmButton: false,
+        timer: 1500
+});
 
-        console.log(res.data);
-        console.log(res.data.message);
+        
 
     } catch (err) {
         console.log(err.response?.data?.message || err.message);
+        Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: err.response?.data?.message || err.message,
+        footer: "<a href=\"#\">Why do I have this issue?</a>"
+});
     }
 };
     

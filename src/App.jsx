@@ -9,6 +9,8 @@ import Jobinfo from './Components/Recent_jobs/Jobinfo'
 import AuthLayOut from './AuthLayOut/AuthLayOut'
 import Login from './Components/Login/Login'
 import Register from './Register/Register'
+import DashboardLayout from './Dashboard/DashboardLayout'
+import Profile from './Dashboard/Profile'
 
 
 
@@ -23,7 +25,7 @@ function App() {
 
         <Route path='/' element={<Home/>}/>
         <Route path='/jobinfo/:id' element={<Jobinfo/>}/>
-        
+
         
          
           
@@ -35,6 +37,14 @@ function App() {
 
 
        </Route> 
+        <Route path='/dashboard' element={<DashboardLayout/>}>
+         <Route path='/dashboard/profile' element={<Profile/>}/>
+       
+         
+
+
+       </Route> 
+
 
        </Routes>
      </BrowserRouter>

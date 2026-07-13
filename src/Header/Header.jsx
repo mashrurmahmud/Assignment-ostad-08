@@ -22,6 +22,10 @@ const Header = () => {
     {
         name: "Blog",
         path: "/blog"
+    },
+    {
+        name:"profile",
+        path:"/dashboard/profile"
     }
 ]
 
