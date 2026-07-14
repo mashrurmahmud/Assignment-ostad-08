@@ -11,6 +11,9 @@ import Login from './Components/Login/Login'
 import Register from './Register/Register'
 import DashboardLayout from './Dashboard/DashboardLayout'
 import Profile from './Dashboard/Profile'
+import ProtectedRoute from './ProtectedRoute/ProtectedRoute'
+import JobCreateLayout from './JobCreatorLayout/JobCreateLayout'
+import JobCreateform from './JobCreatorLayout/JobCreateform'
 
 
 
@@ -38,13 +41,18 @@ function App() {
 
        </Route> 
         <Route path='/dashboard' element={<DashboardLayout/>}>
-         <Route path='/dashboard/profile' element={<Profile/>}/>
+        
+           <Route path='/dashboard/profile' element={<Profile/>}/>
+       
        
          
 
 
        </Route> 
-
+       <Route path= '/jobCreatorLayout' element={<JobCreateLayout/>}
+>
+        <Route path='/jobCreatorLayout/jobCreateform' element={<JobCreateform/>}/>   
+</Route>
 
        </Routes>
      </BrowserRouter>

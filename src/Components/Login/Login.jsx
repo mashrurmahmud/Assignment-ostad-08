@@ -3,6 +3,7 @@ import { useForm } from 'react-hook-form';
 import { Link, useNavigate } from 'react-router-dom';
 import axiosInstance from '../../api/axiosInstance';
 import Swal from 'sweetalert2';
+import { getUserAPi } from '../../utils/jobAPi';
 
 const Login = () => {
     const {register, handleSubmit, formState: { errors } } = useForm();
@@ -30,7 +31,11 @@ const Login = () => {
                     showConfirmButton: false,
                     timer: 1500
             });
-            navigate('/');
+              const user = await getUserAPi();
+            
+                    console.log(user?.message);
+                    console.log(user?.user?.email)
+                     navigate('/');
 
         }catch(error){
             Swal.fire({

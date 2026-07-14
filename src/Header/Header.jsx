@@ -12,7 +12,7 @@ const Header = () => {
     },
     {
         name: "For Candidates",
-        path: "/candidates"
+        path: "/jobCreatorLayout/jobCreateform"
     },
     {
         name: "For Employeers",

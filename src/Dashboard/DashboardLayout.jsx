@@ -10,7 +10,7 @@ const DashboardLayout = () => {
     return (
         <div className='container  mx-auto'>
             <Header/>
-             <div className='flex gap-2'>
+             <div className='flex justify-center items-center gap-2'>
                  <div>
                  <div className='sticky letf-0 top-0 h-[500px] w-72 border-sky-500 border shadow-lg'>
 
@@ -23,7 +23,7 @@ const DashboardLayout = () => {
 
             </div>
             </div>
-            <div className='w-full   h-auto border-2 mx-auto'>
+            <div className='w-full   h-auto  mx-auto'>
                 <Outlet/>
             </div>
              </div>

@@ -15,7 +15,7 @@ const JobCart = ({job}) => {
              </div>
              <div>
                 <Link to={`/jobinfo/${job?._id}`}><h1 className='text-[30px] font-bold roboto'>{job?.title}</h1></Link>
-                <p className='roboto '>{job?.location},  <i class="fa-solid fa-tag"></i> {job?.type}  </p>
+                <p className='roboto '>{job?.location},  <i className="fa-solid fa-tag"></i> {job?.type}  </p>
              </div>
            </div>
            <div className='flex items-center justify-between'>

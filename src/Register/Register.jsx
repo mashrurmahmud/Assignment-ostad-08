@@ -4,6 +4,8 @@ import axiosInstance from "../api/axiosInstance";
 import { zodResolver } from '@hookform/resolvers/zod';
 import * as z from "zod";
 import Swal from "sweetalert2";
+import { useAuthStore } from "../store/useStore";
+import { getUserAPi } from "../utils/jobAPi";
 
 // @hookform/resolvers/zod
 
@@ -19,6 +21,8 @@ import Swal from "sweetalert2";
         path: ["confirmPassword"],
     });
 const Register = () => {
+  
+    
     const {register, handleSubmit, formState: { errors } } = useForm(
         {
             resolver:zodResolver(user),
@@ -40,7 +44,9 @@ const Register = () => {
         showConfirmButton: false,
         timer: 1500
 });
+        const user = await getUserAPi();
 
+        console.log(user?.message);
          
 
         

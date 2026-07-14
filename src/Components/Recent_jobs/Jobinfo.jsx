@@ -1,13 +1,17 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './JobInfo.css'
-import { useParams } from 'react-router-dom';
+import { useLocation, useParams } from 'react-router-dom';
 import { useGetJobsInfo } from '../../utils/jobHook';
 import { CircularProgress } from '@mui/material';
 
 const Jobinfo = () => {
     const {id} = useParams();
+    const { path} = useLocation()
     console.log(id);
+    useEffect(() => {
+        window.scrollTo(0, 0);
 
+    })
     const getJobInfo = useGetJobsInfo(id);
     if(getJobInfo?.isLoading) return <div className='flex justify-center h-screen items-center'><CircularProgress aria-label="Loading…" /></div>;
 

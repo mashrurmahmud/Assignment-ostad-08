@@ -1,8 +1,8 @@
 import axios from "axios";
 
 
-const axiosInstance = axios.create({
-        baseURL: 'http://localhost:5000/auth/api/',
+const JobaxiosInstance = axios.create({
+        baseURL: 'http://localhost:5000/jobs/api',
         headers: {
             'Content-Type': 'application/json',
         },
@@ -10,4 +10,4 @@ const axiosInstance = axios.create({
     });
 
 
-export default axiosInstance;    
+export default JobaxiosInstance;
