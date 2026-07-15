@@ -1,14 +1,20 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 import { Link, useNavigate } from 'react-router-dom';
 import axiosInstance from '../../api/axiosInstance';
 import Swal from 'sweetalert2';
 import { getUserAPi } from '../../utils/jobAPi';
+import { useAuthStore } from '../../store/useStore';
 
 const Login = () => {
     const {register, handleSubmit, formState: { errors } } = useForm();
     const navigate = useNavigate();
-    
+
+    const {user, fetchUser} = useAuthStore()
+    console.log(user);
+    useEffect(() => {
+        fetchUser();
+    }, [fetchUser])
 
 
     //     try {

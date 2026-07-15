@@ -17,7 +17,7 @@ const jobholder = z.object({
     // skills:z.string().min(2, { message: " skills must be required" }),
     type:z.string().min(2, { message: " type must be required" }),
     salary:z.string(),
-    experience:z.string().min(2, { message: " experience must be required" }),
+    experience:z.string().min(0, { message: " experience must be required" }),
     // benefits:z.string().min(2, { message: " benifits must be required" }),
     logo:z.any(),
     
@@ -254,7 +254,7 @@ const JobCreateform = () => {
             {/* logo */}
            {
              imgbb? (<div>
-              <img className='w-25 h-25 rounded-full shadow-lg border-2 border-sky-600' src={imgbb || loading && <CircularProgress /> } alt="the image logo" />
+              <img className='w-25 h-25 rounded-full shadow-lg border-2 border-sky-600' src={imgbb } alt="the image logo" />
              </div>):( <div>
               <label className="block mb-2 font-medium text-gray-700">
                 Company Logo

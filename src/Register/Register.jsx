@@ -43,10 +43,12 @@ const Register = () => {
         title: "Your work has been saved",
         showConfirmButton: false,
         timer: 1500
-});
+        });
         const user = await getUserAPi();
 
-        console.log(user?.message);
+       
+      
+         navigate('/');
          
 
         

@@ -14,6 +14,7 @@ import Profile from './Dashboard/Profile'
 import ProtectedRoute from './ProtectedRoute/ProtectedRoute'
 import JobCreateLayout from './JobCreatorLayout/JobCreateLayout'
 import JobCreateform from './JobCreatorLayout/JobCreateform'
+import AppliedJob from './Components/AppliedJob/AppliedJob'
 
 
 
@@ -42,7 +43,8 @@ function App() {
        </Route> 
         <Route path='/dashboard' element={<DashboardLayout/>}>
         
-           <Route path='/dashboard/profile' element={<Profile/>}/>
+          <Route path='/dashboard/profile' element={<ProtectedRoute><Profile/></ProtectedRoute>}/>
+          <Route path='/dashboard/applied-job' element={<ProtectedRoute><AppliedJob/></ProtectedRoute>}/>
        
        
          
@@ -51,8 +53,8 @@ function App() {
        </Route> 
        <Route path= '/jobCreatorLayout' element={<JobCreateLayout/>}
 >
-        <Route path='/jobCreatorLayout/jobCreateform' element={<JobCreateform/>}/>   
-</Route>
+        <Route path='/jobCreatorLayout/jobCreateform' element={<ProtectedRoute><JobCreateform/></ProtectedRoute>}/>   
+        </Route>
 
        </Routes>
      </BrowserRouter>

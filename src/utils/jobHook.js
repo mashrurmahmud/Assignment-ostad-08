@@ -1,5 +1,5 @@
-import { useMutation, useQuery } from "@tanstack/react-query"
-import { createJob, getJob, getUserAPi, jobApiInfo } from "./jobAPi"
+import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query"
+import { appliedJob, createJob, deleteAppliedJob, getJob, getUserAPi, jobApiInfo } from "./jobAPi"
 
 
 
@@ -18,6 +18,32 @@ export const useGetAPIuser =()=>{
         queryKey:['users'],
         queryFn:async()=>{
             return await getUserAPi()
+        }
+    })
+}
+
+
+export const useDeleteApplyJob = ()=>{
+    const queryClient = useQueryClient();
+   return  useMutation({
+        mutationFn: async(id)=>{
+            return await deleteAppliedJob(id)
+        },
+        onMutate:async(id)=>{
+            await queryClient.cancelQueries(['appliedjobs'])
+
+        },
+        onSuccess:()=>{
+            queryClient.invalidateQueries(['jobs'])
+        }
+    })
+}
+
+export const useGetAppliedJobs = ()=>{
+    return useQuery({
+        queryKey:['appliedjobs'],
+        queryFn: async()=>{
+            return await appliedJob();
         }
     })
 }

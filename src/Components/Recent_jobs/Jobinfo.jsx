@@ -3,6 +3,8 @@ import './JobInfo.css'
 import { useLocation, useParams } from 'react-router-dom';
 import { useGetJobsInfo } from '../../utils/jobHook';
 import { CircularProgress } from '@mui/material';
+import axios from 'axios';
+import Swal from 'sweetalert2';
 
 const Jobinfo = () => {
     const {id} = useParams();
@@ -11,11 +13,49 @@ const Jobinfo = () => {
     useEffect(() => {
         window.scrollTo(0, 0);
 
-    })
+    },[path])
     const getJobInfo = useGetJobsInfo(id);
     if(getJobInfo?.isLoading) return <div className='flex justify-center h-screen items-center'><CircularProgress aria-label="Loading…" /></div>;
 
-    console.log(getJobInfo);
+    
+
+    const handleJobApply = async(id) => {
+        
+        try{
+             const data = await axios.post(`http://localhost:5000/apply/api/createapply`,{
+
+            jobId:id,
+            withCredentials:true
+        })
+
+        if(data?.status === 201){
+            alert('Job applied successfully');
+           
+            Swal.fire({
+            position: "center",
+            icon: "success",
+            title: "Your work has been saved",
+            showConfirmButton: false,
+            timer: 1500
+            });
+        } 
+        }catch(error){
+            console.log(error?.response?.data?.message);
+            Swal.fire({
+            icon: "error",
+            html: `<h1 className='text-red-600'>${error?.response?.data?.message}</h1>`,
+            title: "Oops...",
+            text: `${error?.response?.data?.message}`,
+            footer: "<a href=\"#\">Why do I have this issue?</a>"
+});
+        }
+
+        
+        
+      
+      
+       
+    }
     
     return (
       <div className='container mx-auto ml-5 mr-5 '>
@@ -43,7 +83,7 @@ const Jobinfo = () => {
                 {getJobInfo?.data?.requirements?.map((requirement,index) => <li className='roboto' key={index}>{requirement}</li>)}
             </ul>
             <div className='my-3'>
-                <button className='bg-sky-400 w-[200px] h-auto cursor-pointer text-white p-2 rounded-lg active:bg-black'>Apply</button>
+                <button onClick={()=>handleJobApply(getJobInfo?.data?._id)} className='bg-sky-400 w-[200px] h-auto cursor-pointer text-white p-2 rounded-lg active:bg-black'>Apply</button>
             </div>
 
         </div>

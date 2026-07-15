@@ -1,19 +1,50 @@
 import { create } from "zustand"
 import { useGetAPIuser } from "../utils/jobHook"
 import { getUserAPi } from "../utils/jobAPi"
+import { use } from "react";
 
 
 
 export const useAuthStore = create((set) => ({
     
-    
+    user:null,
     loading:true,
-    setUser :()=> set((state) => ({ users: state.users, loading: false })),
+    setUser :(user)=> set({user, loading:false}),
     fetchUser:async()=>{
-       return getUserAPi()
+        try{
 
+           
+            const data = await getUserAPi();
+            console.log(data?.user?.email);
+            set({loading:false, user:data?.user?.email})
+
+
+        }catch(err){
+            console.log(err);
+            set({loading:false, user:null})
+        }
+        
+
+    },
+
+    logout:async()=>{
+        try{
+            const res = await fetch('http://localhost:5000/auth/api/logout',{
+                method:'POST',
+                credentials:'include'
+            });
+            if(res?.ok){
+                set({loading:false, user:null})
+            }
+
+        }catch(err){
+            console.log(err);
+        }
+        
     }
 
 
     
 }))
+
+
