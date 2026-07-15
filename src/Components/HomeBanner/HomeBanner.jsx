@@ -1,5 +1,5 @@
 import React from 'react';
-import './HomeBanner.css'
+import './Homebanner.css'
 
 const HomeBanner = () => {
     return (
