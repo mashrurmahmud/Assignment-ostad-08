@@ -47,7 +47,7 @@ const JobCreateform = () => {
         resolver:zodResolver(jobholder)
     });
 
-    const image_api_key = '7011f7047816452805e48c4b506e7c1c';
+    const image_api_key = import.meta.env.VITE_IMG_URL_API_KEY;
     const image_upload_url = `https://api.imgbb.com/1/upload?key=${image_api_key}`;
     const [company_skills, setCompany_skills] = useState('');
 

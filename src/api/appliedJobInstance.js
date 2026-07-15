@@ -3,7 +3,7 @@ import axios from "axios";
 
 
  const appliedJobInstace = axios.create({
-    baseURL: 'http://localhost:5000/apply/api',
+    baseURL: import.meta.env.VITE_BASE_URl_APPLIED_JOB_INSTANSE,
     headers: {
         'Content-Type': 'application/json',
     },

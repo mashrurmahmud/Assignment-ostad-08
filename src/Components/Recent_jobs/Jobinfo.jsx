@@ -22,7 +22,7 @@ const Jobinfo = () => {
     const handleJobApply = async(id) => {
         
         try{
-             const data = await axios.post(`http://localhost:5000/apply/api/createapply`,{
+             const data = await axios.post(import.meta.env.VITE_CREAPTE_APPLY_API,{
 
             jobId:id,
             withCredentials:true
