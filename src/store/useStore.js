@@ -29,7 +29,7 @@ export const useAuthStore = create((set) => ({
 
     logout:async()=>{
         try{
-            const res = await fetch('http://localhost:5000/auth/api/logout',{
+            const res = await fetch('https://o-stad-backend-code-assignment-08-hmc68trfi.vercel.app/auth/api/logout',{
                 method:'POST',
                 credentials:'include'
             });
