@@ -28,7 +28,7 @@ export const jobApiInfo = async(id)=>{
 
 
 export const getUserAPi =async()=>{
-    const res = await fetch('https://o-stad-backend-code-assignment-08-hmc68trfi.vercel.app/auth/api/apiuser',{
+    const res = await fetch('https://o-stad-backend-code-assignment-08-o5ky3mcel.vercel.app/auth/api/apiuser',{
         credentials:'include'
     });
     if(res?.ok){
