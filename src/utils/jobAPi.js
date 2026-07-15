@@ -7,7 +7,7 @@ import appliedJobInstace from "../api/appliedJobInstance";
 
 export const getJob = async() => {
     
-    const res = await fetch('http://localhost:5000/jobs/api/getjobs');
+    const res = await fetch('https://o-stad-backend-code-assignment-08-hmc68trfi.vercel.app/jobs/api/getjobs');
     if(res?.ok){
         return res.json();
     }
@@ -15,7 +15,7 @@ export const getJob = async() => {
 
 export const jobApiInfo = async(id)=>{
     
-    const res = await fetch(`http://localhost:5000/jobs/api/getjobs/${id}`,{
+    const res = await fetch(`https://o-stad-backend-code-assignment-08-hmc68trfi.vercel.app/jobs/api/getjobs/${id}`,{
         
     });
     if(res?.ok){
@@ -28,7 +28,7 @@ export const jobApiInfo = async(id)=>{
 
 
 export const getUserAPi =async()=>{
-    const res = await fetch('http://localhost:5000/auth/api/apiuser',{
+    const res = await fetch('https://o-stad-backend-code-assignment-08-hmc68trfi.vercel.app/auth/api/apiuser',{
         credentials:'include'
     });
     if(res?.ok){
