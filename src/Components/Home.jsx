@@ -1,7 +1,7 @@
 import React from 'react';
 import './Home.css'
-import HomeBanner from './HomeBanner/HomeBanner';
-import './HomeBanner/HomeBanner.css'
+import HomeBanner from  './HomeBanner/HomeBanner'
+import './HomeBanner/Homebanner.css'
 import Categories from './Categories/Categories';
 import Featured_cities from '../Featured_cities/Featured_cities';
 import Recent_jobs from './Recent_jobs/Recent_jobs';
